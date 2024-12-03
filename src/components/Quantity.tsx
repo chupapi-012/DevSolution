@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Banner: React.FC = () => {
+const Quantity: React.FC = () => {
     return (
 
-        < div >
+        <  >
             <label htmlFor="Quantity" className="sr-only"> Quantity </label>
 
             <div className="flex items-center gap-1">
@@ -26,4 +26,4 @@ const Banner: React.FC = () => {
     );
 };
 
-export default Banner;
+export default Quantity;

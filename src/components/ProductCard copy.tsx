@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Cart: React.FC = () => {
+const ProductCard: React.FC = () => {
     return (
         <a href="#" className="relative block rounded-tr-3xl border border-gray-100">
             <span
@@ -33,4 +33,4 @@ const Cart: React.FC = () => {
     );
 };
 
-export default Cart;
+export default ProductCard;

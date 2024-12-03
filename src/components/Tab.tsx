@@ -2,16 +2,17 @@ import React from 'react';
 
 const Tab: React.FC = () => {
     return (
-        < div >
+        <  >
             <div className="sm:hidden">
                 <label htmlFor="Tab" className="sr-only">Tab</label>
 
-                <select id="Tab" className="w-full rounded-md border-gray-200">
+                <select id="Tab" className="w-full rounded-md border-gray-200" defaultValue="Notifications">
                     <option>Settings</option>
                     <option>Messages</option>
                     <option>Archive</option>
-                    <option select>Notifications</option>
+                    <option>Notifications</option>
                 </select>
+
             </div>
 
             <div className="hidden sm:block">

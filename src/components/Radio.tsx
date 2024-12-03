@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Banner: React.FC = () => {
+const Radio: React.FC = () => {
     return (
         <fieldset className="space-y-4">
             <legend className="sr-only">Delivery</legend>
@@ -51,4 +51,4 @@ const Banner: React.FC = () => {
     );
 };
 
-export default Banner;
+export default Radio;

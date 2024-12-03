@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Banner: React.FC = () => {
+const Table: React.FC = () => {
     return (
 
-        < div className="overflow-x-auto" >
+        <div className="overflow-x-auto" >
             <table className="min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
                 <thead className="ltr:text-left rtl:text-right">
                     <tr>
@@ -62,8 +62,8 @@ const Banner: React.FC = () => {
                     </tr>
                 </tbody>
             </table>
-        </ >
+        </div >
     );
 };
 
-export default Banner;
+export default Table;

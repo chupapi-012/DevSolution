@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Vertical: React.FC = () => {
+const Blog: React.FC = () => {
     return (
 
         < article className="overflow-hidden rounded-lg border border-gray-100 bg-white shadow-sm" >
@@ -32,8 +32,8 @@ const Vertical: React.FC = () => {
                     </span>
                 </a>
             </div>
-        </ >
+        </ article>
     );
 };
 
-export default Vertical;
+export default Blog;

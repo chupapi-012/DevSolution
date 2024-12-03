@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Banner: React.FC = () => {
+const Side1: React.FC = () => {
     return (
         <div className="flex">
             <div className="flex h-screen w-16 flex-col justify-between border-e bg-white">
@@ -333,4 +333,4 @@ const Banner: React.FC = () => {
     );
 };
 
-export default Banner;
+export default Side1;

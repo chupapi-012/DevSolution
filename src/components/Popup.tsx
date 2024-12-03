@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Vertical: React.FC = () => {
+const Popup: React.FC = () => {
     return (
         <section className="overflow-hidden rounded-lg shadow-2xl md:grid md:grid-cols-3">
             <img
@@ -33,4 +33,4 @@ const Vertical: React.FC = () => {
     );
 };
 
-export default Vertical;
+export default Popup;

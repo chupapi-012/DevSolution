@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Cart: React.FC = () => {
+const ProductCard2: React.FC = () => {
     return (
         <a href="#" className="group relative block overflow-hidden">
             <button
@@ -49,4 +49,4 @@ const Cart: React.FC = () => {
     );
 };
 
-export default Cart;
+export default ProductCard2;

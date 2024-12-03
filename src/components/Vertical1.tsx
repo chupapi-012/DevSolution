@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Vertical: React.FC = () => {
+const Vertical1: React.FC = () => {
     return (
         <ul className="space-y-1">
             <li>
@@ -211,4 +211,4 @@ const Vertical: React.FC = () => {
     );
 };
 
-export default Vertical;
+export default Vertical1;

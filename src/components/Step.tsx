@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Banner: React.FC = () => {
+const Step: React.FC = () => {
     return (
         <div>
             <h2 className="sr-only">Steps</h2>
@@ -78,4 +78,4 @@ const Banner: React.FC = () => {
     );
 };
 
-export default Banner;
+export default Step;

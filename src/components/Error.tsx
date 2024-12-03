@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Banner: React.FC = () => {
+const Error: React.FC = () => {
     return (
         <div className="grid h-screen place-content-center bg-white px-4">
             <div className="text-center">
@@ -21,4 +21,4 @@ const Banner: React.FC = () => {
     );
 };
 
-export default Banner;
+export default Error;

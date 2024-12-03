@@ -333,4 +333,4 @@ const Side: React.FC = () => {
     );
 };
 
-export default Banner;
+export default Side;
