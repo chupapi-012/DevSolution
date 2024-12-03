@@ -4,10 +4,7 @@ import CTA from '@/components/CTA';
 import Cart from "@/components/Cart";
 import Error from "@/components/Error";
 import FAQ from '@/components/FAQ';
-import Footer from "@/components/Footer";
 import Grid from "@/components/Grid";
-import Header from '@/components/Header';
-import Log from "@/components/Log";
 import Popup from "@/components/Popup";
 import Pricing from '@/components/Pricing';
 import Product from "@/components/Product";
@@ -35,10 +32,7 @@ export default function Home() {
       <Cart />
       <Error />
       <FAQ />
-      <Footer/>
       <Grid/>
-      <Header/>
-      <Log/>
       <Popup/>
       <Pricing/>
       <Product/>
