@@ -1,133 +1,86 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
+
+type ItemProps = {
+    title: string;
+    children: React.ReactNode;
+};
+
+const Item: React.FC<ItemProps> = ({ title, children }) => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleOpen = () => setIsOpen((prev) => !prev);
+
+    return (
+        <div className="border-b">
+            <button
+                type="button"
+                aria-label={isOpen ? "Close item" : "Open item"}
+                aria-expanded={isOpen}
+                className="flex items-center justify-between w-full p-4 focus:outline-none"
+                onClick={toggleOpen}
+            >
+                <p className="text-lg font-medium">{title}</p>
+                <svg
+                    viewBox="0 0 24 24"
+                    className={`w-3 text-gray-600 transform transition-transform duration-200 ${isOpen ? 'rotate-180' : ''
+                        }`}
+                >
+                    <polyline
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeMiterlimit="10"
+                        points="2,7 12,17 22,7"
+                        strokeLinejoin="round"
+                    />
+                </svg>
+            </button>
+            {isOpen && (
+                <div className="p-4 pt-0">
+                    <p className="text-gray-700">{children}</p>
+                </div>
+            )}
+        </div>
+    );
+};
 
 const FAQ: React.FC = () => {
     return (
-        <div className="space-y-4 w-3/4 mx-auto">
-            <details
-                className="group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
-                open
-            >
-                <summary className="flex cursor-pointer items-center justify-between gap-1.5">
-                    <h2 className="text-lg font-medium text-gray-900">
-                        Lorem ipsum dolor sit amet consectetur adipisicing?
+        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
+                <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+                    <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+                        <span className="relative inline-block">
+                            <span className="relative">Frequently</span>
+                        </span>{' '}
+                        Asked Questions
                     </h2>
-
-                    <span className="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="size-5 shrink-0 transition duration-300 group-open:-rotate-45"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                        >
-                            <path
-                                fillRule="evenodd"
-                                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                                clipRule="evenodd"
-                            />
-                        </svg>
-                    </span>
-                </summary>
-
-                <p className="mt-4 leading-relaxed text-gray-700">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in,
-                    recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo
-                    consequuntur distinctio corporis earum similique!
-                </p>
-            </details>
-
-            <details
-                className="group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
-            >
-                <summary className="flex cursor-pointer items-center justify-between gap-1.5">
-                    <h2 className="text-lg font-medium text-gray-900">
-                        Lorem ipsum dolor sit amet consectetur adipisicing?
-                    </h2>
-
-                    <span className="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="size-5 shrink-0 transition duration-300 group-open:-rotate-45"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                        >
-                            <path
-                                fillRule="evenodd"
-                                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                                clipRule="evenodd"
-                            />
-                        </svg>
-                    </span>
-                </summary>
-
-                <p className="mt-4 leading-relaxed text-gray-700">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in,
-                    recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo
-                    consequuntur distinctio corporis earum similique!
-                </p>
-            </details>
-
-            <details
-                className="group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
-                open
-            >
-                <summary className="flex cursor-pointer items-center justify-between gap-1.5">
-                    <h2 className="text-lg font-medium text-gray-900">
-                        Lorem ipsum dolor sit amet consectetur adipisicing?
-                    </h2>
-
-                    <span className="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="size-5 shrink-0 transition duration-300 group-open:-rotate-45"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                        >
-                            <path
-                                fillRule="evenodd"
-                                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                                clipRule="evenodd"
-                            />
-                        </svg>
-                    </span>
-                </summary>
-
-                <p className="mt-4 leading-relaxed text-gray-700">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in,
-                    recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo
-                    consequuntur distinctio corporis earum similique!
-                </p>
-            </details>
-
-            <details
-                className="group border-s-4 border-green-500 bg-gray-50 p-6 [&_summary::-webkit-details-marker]:hidden"
-            >
-                <summary className="flex cursor-pointer items-center justify-between gap-1.5">
-                    <h2 className="text-lg font-medium text-gray-900">
-                        Lorem ipsum dolor sit amet consectetur adipisicing?
-                    </h2>
-
-                    <span className="shrink-0 rounded-full bg-white p-1.5 text-gray-900 sm:p-3">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="size-5 shrink-0 transition duration-300 group-open:-rotate-45"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                        >
-                            <path
-                                fillRule="evenodd"
-                                d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z"
-                                clipRule="evenodd"
-                            />
-                        </svg>
-                    </span>
-                </summary>
-
-                <p className="mt-4 leading-relaxed text-gray-700">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in,
-                    recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo
-                    consequuntur distinctio corporis earum similique!
-                </p>
-            </details>
+                    <p className="text-base text-gray-700 md:text-lg">
+                        Find answers to commonly asked questions about our services.
+                    </p>
+                </div>
+                <div className="space-y-4">
+                    <Item title="The quick, brown fox jumps over a lazy dog?">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                    </Item>
+                    <Item title="The first mate and his Skipper too will do?">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                    </Item>
+                    <Item title="Is the Space Pope reptilian!?">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                    </Item>
+                    <Item title="How much money you got on you?">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                        accusantium doloremque rem aperiam, eaque ipsa quae.
+                    </Item>
+                </div>
+            </div>
         </div>
     );
 };

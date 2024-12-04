@@ -1,3 +1,7 @@
+"use client";
+
+import React from 'react';
+
 import Banner from "@/components/Banner";
 import Blog from "@/components/Blog";
 import CTA from '@/components/CTA';
@@ -22,11 +26,13 @@ import Tab from '@/components/Tab';
 import Table from '@/components/Table';
 import Vertical from '@/components/Vertical';
 import Vertical1 from '@/components/Vertical1';
+import Weare from "@/components/Weare";
 
 export default function Home() {
   return (
     <>
       <Banner />
+      <Weare/>
       <Blog />
       <CTA />
       <Cart />
