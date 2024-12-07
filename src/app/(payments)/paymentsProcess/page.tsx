@@ -2,7 +2,7 @@ import React from 'react';
 
 const Step: React.FC = () => {
     return (
-        <div>
+        <div className='container mx-auto px-12 w-5/6'>
             <h2 className="sr-only">Steps</h2>
 
             <div>

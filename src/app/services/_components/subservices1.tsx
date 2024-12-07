@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Product: React.FC = () => {
+const Subservices1: React.FC = () => {
     return (
 
         <section  >
@@ -384,4 +384,4 @@ const Product: React.FC = () => {
     );
 };
 
-export default Product;
+export default Subservices1;
