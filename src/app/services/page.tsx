@@ -1,21 +1,18 @@
 "use client";
 
 import React from 'react';
-
-import AllServices from './_components/Allservices';
 import Popup from './_components/Popup';
-import Subservices1 from './_components/subservices1';
+import servicespage from './_components/services';
 
 
-const ServicesPage = () => {
+const page = () => {
   return (
     <div>
-      <AllServices />
       <Popup />
-      <Subservices1 />
+      <services />
     </div>
   );
 };
 
-export default ServicesPage;
+export default page;
 
